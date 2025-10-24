@@ -1,0 +1,1 @@
+I will proceed to writing the schema in SQL
