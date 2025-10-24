@@ -6,4 +6,4 @@ It is generally in really good structure. Where I have "improved" on it is havin
 
 this leaves me with:
 
-![alt text](nomalized_er_diagram.png)
+![alt text](ERD/nomalized_er_diagram.png)
