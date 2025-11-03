@@ -26,3 +26,12 @@ GROUP BY
     p.property_id, 
     p.name
 ORDER BY property_rank;
+
+--OR
+
+SELECT
+    property_id,
+    COUNT(*) AS total_bookings,
+    ROW_NUMBER() OVER (ORDER BY COUNT(*) DESC) AS booking_rank
+FROM bookings
+GROUP BY property_id;
