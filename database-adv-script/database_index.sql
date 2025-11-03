@@ -14,3 +14,11 @@ CREATE INDEX idx_properties_host_id ON properties (host_id);
 CREATE INDEX idx_properties_location ON properties (location);
 CREATE INDEX idx_properties_pricepernight ON properties (pricepernight);
 CREATE INDEX idx_properties_created_at ON properties (created_at);
+
+EXPLAIN ANALYSE
+SELECT *
+FROM bookings b
+JOIN users u ON b.user_id = u.user_id
+WHERE b.status = 'confirmed'
+ORDER BY b.created_at DESC
+LIMIT 10;
