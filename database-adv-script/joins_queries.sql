@@ -22,7 +22,8 @@ SELECT p.*,
     r.*
 FROM properties p
     LEFT JOIN reviews r
-    ON r.property_id = p.property_id;
+    ON r.property_id = p.property_id
+ORDER BY p.property_id;
 
 --OR select certain elements
 SELECT
