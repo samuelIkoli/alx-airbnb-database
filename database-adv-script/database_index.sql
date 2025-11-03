@@ -15,7 +15,7 @@ CREATE INDEX idx_properties_location ON properties (location);
 CREATE INDEX idx_properties_pricepernight ON properties (pricepernight);
 CREATE INDEX idx_properties_created_at ON properties (created_at);
 
-EXPLAIN ANALYSE
+EXPLAIN
 SELECT *
 FROM bookings b
 JOIN users u ON b.user_id = u.user_id
