@@ -39,8 +39,16 @@ FROM properties p
 
 --Task 0c) A query using a FULL OUTER JOIN to retrieve all users and all bookings, even if the user has no booking or a booking is not linked to a user.
 SELECT
-    u.*,
-    b.*
+    u.user_id,
+    u.first_name,
+    u.last_name,
+    u.email,
+    b.booking_id,
+    b.property_id,
+    b.start_date,
+    b.end_date,
+    b.total_price,
+    b.status
 FROM users u
     FULL OUTER JOIN bookings b
     ON u.user_id = b.user_id;
